@@ -1,0 +1,38 @@
+# tkr configuration
+# Copy this file to ~/.config/tkr/config.yaml and fill in your values.
+
+polling_interval: 5m
+market_hours_only: true
+stale_threshold: 20m
+history_retention: 2160h   # 90 days
+log_level: info
+log_file: ~/.local/share/tkr/app.log
+
+database:
+  path: ~/.local/share/tkr/data.db
+
+providers:
+  finnhub:
+    api_key: ""            # https://finnhub.io — free tier: 60 req/min
+    enabled: true
+    priority: 1
+  stooq:
+    enabled: true          # no key needed; covers GPW Warsaw and more
+    priority: 2
+  yahoofinance:
+    enabled: true          # unofficial; no key needed; universal fallback
+    priority: 3
+  eodhd:
+    api_key: ""            # https://eodhd.com — add in v0.2
+    enabled: false
+    priority: 4
+
+notifications:
+  email:
+    smtp_host: smtp.gmail.com
+    smtp_port: 587
+    from: ""
+    password: ""           # use an app password, not your account password
+    to: []
+  webhook:
+    url: ""                # Slack or Discord incoming webhook URL

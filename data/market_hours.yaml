@@ -1,0 +1,28 @@
+# Market open/close times in UTC. Used by the scheduler's market-hours gate.
+# Public holidays are not yet modelled — treat these as approximate.
+
+exchanges:
+  NYSE:
+    open: "14:30"
+    close: "21:00"
+    days: [Mon, Tue, Wed, Thu, Fri]
+  NASDAQ:
+    open: "14:30"
+    close: "21:00"
+    days: [Mon, Tue, Wed, Thu, Fri]
+  GPW:
+    open: "08:00"
+    close: "16:50"
+    days: [Mon, Tue, Wed, Thu, Fri]
+  XETRA:
+    open: "07:00"
+    close: "15:30"
+    days: [Mon, Tue, Wed, Thu, Fri]
+  LSE:
+    open: "08:00"
+    close: "16:30"
+    days: [Mon, Tue, Wed, Thu, Fri]
+  EURONEXT:
+    open: "08:00"
+    close: "16:30"
+    days: [Mon, Tue, Wed, Thu, Fri]
