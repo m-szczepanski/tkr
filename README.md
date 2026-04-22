@@ -4,7 +4,6 @@
 
 tkr lets you track stocks from multiple global exchanges — including the US markets, Polish GPW/WIG, and major international indices — right from your command line. Configure price thresholds, percentage change alerts, and volume spikes, then let the daemon watch the markets for you and fire off notifications when your conditions are met.
 
-
 ## Features
 
 - **Multi-exchange support** — US (NYSE, NASDAQ), Polish GPW/WIG, Frankfurt, London, and more
@@ -20,7 +19,7 @@ tkr lets you track stocks from multiple global exchanges — including the US ma
 ## Tech Stack
 
 | Layer | Choice |
-|---|---|
+| --- | --- |
 | Language | Go 1.25+ |
 | CLI framework | [Cobra](https://github.com/spf13/cobra) |
 | Config | [Viper](https://github.com/spf13/viper) (YAML/TOML/env) |
@@ -131,7 +130,7 @@ path: ~/.local/share/tkr/data.db
 ## Supported Exchanges
 
 | Exchange | Ticker Format | Primary Provider | Notes |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | NYSE / NASDAQ (US) | `AAPL`, `TSLA` | Finnhub / Alpha Vantage | Real-time with paid tier |
 | GPW Warsaw (PL) | `CDR.WAR`, `PKN.WAR` | Stooq / GPW API | 15 min delay on free tier |
 | Frankfurt (XETRA) | `VOW3.FRA` | Yahoo Finance / EODHD | |
@@ -139,10 +138,9 @@ path: ~/.local/share/tkr/data.db
 | Euronext | `AIR.EPA` (Paris) | Yahoo Finance / EODHD | |
 | Global indices | `^GSPC`, `^WIG20` | Alpha Vantage / Stooq | Read-only, no alerts on indices |
 
-## Project Structure 
+## Project Structure
 
 ```
-
 tkr/
 
 ├── cmd/ # Cobra command definitions

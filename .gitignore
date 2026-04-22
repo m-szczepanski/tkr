@@ -27,7 +27,14 @@ go.work.sum
 # env file
 .env
 
+# Agent files
+agent.yaml
+agent.log
+BOOTSTRAP.md
+
+
 # Editor/IDE
 .idea/
 .vscode/
 .copilot/
+.agent/
