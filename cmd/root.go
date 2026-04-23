@@ -1,8 +1,6 @@
 package cmd
 
 import (
-	"os"
-
 	"github.com/rs/zerolog"
 	"github.com/spf13/cobra"
 )
@@ -12,10 +10,8 @@ var rootCmd = &cobra.Command{
 	Short: "Terminal stock monitor and alert system",
 }
 
-func Execute() {
-	if err := rootCmd.Execute(); err != nil {
-		os.Exit(1)
-	}
+func Execute() error {
+	return rootCmd.Execute()
 }
 
 func init() {

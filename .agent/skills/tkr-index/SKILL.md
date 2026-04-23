@@ -10,8 +10,9 @@ description: >
 
 # tkr — Skill Index
 
-This project has **6 skills**. This file is the map. It tells you which skill to read
-for any given task and in what order.
+This project has **6 functional skills**, plus this index (**7 total skill docs**).
+This file is the map. It tells you which skill to read for any given task and in what
+order.
 
 ---
 

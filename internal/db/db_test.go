@@ -99,9 +99,9 @@ func TestQuoteHistoryMethods(t *testing.T) {
 	base := time.Now().UTC().Truncate(time.Second)
 
 	quotes := []models.Quote{
-		{Ticker: "AAPL", Price: 101.25, Volume: 1000, ChangePct: 0.1, Source: "finnhub", Timestamp: base.Add(-3 * time.Hour)},
-		{Ticker: "AAPL", Price: 102.50, Volume: 1100, ChangePct: 0.2, Source: "finnhub", Timestamp: base.Add(-2 * time.Hour)},
-		{Ticker: "AAPL", Price: 103.75, Volume: 1200, ChangePct: 0.3, Source: "finnhub", Timestamp: base.Add(-1 * time.Hour)},
+		{Ticker: "AAPL", Price: 101.25, Volume: 1000, ChangePct: 0.1, Source: models.ProviderID("finnhub"), Timestamp: base.Add(-3 * time.Hour)},
+		{Ticker: "AAPL", Price: 102.50, Volume: 1100, ChangePct: 0.2, Source: models.ProviderID("finnhub"), Timestamp: base.Add(-2 * time.Hour)},
+		{Ticker: "AAPL", Price: 103.75, Volume: 1200, ChangePct: 0.3, Source: models.ProviderID("finnhub"), Timestamp: base.Add(-1 * time.Hour)},
 	}
 
 	for _, q := range quotes {

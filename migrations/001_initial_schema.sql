@@ -1,7 +1,7 @@
 BEGIN;
 
 -- Watched stocks
-CREATE TABLE IF NOT EXISTS stocks (
+CREATE TABLE stocks (
   ticker      TEXT PRIMARY KEY,
   name        TEXT NOT NULL,
   exchange    TEXT NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS stocks (
 );
 
 -- Alert rules
-CREATE TABLE IF NOT EXISTS alert_rules (
+CREATE TABLE alert_rules (
   id          INTEGER PRIMARY KEY AUTOINCREMENT,
   ticker      TEXT NOT NULL REFERENCES stocks(ticker),
   metric      TEXT NOT NULL,
@@ -26,7 +26,7 @@ CREATE TABLE IF NOT EXISTS alert_rules (
 );
 
 -- Alert events (history)
-CREATE TABLE IF NOT EXISTS alert_events (
+CREATE TABLE alert_events (
   id           INTEGER PRIMARY KEY AUTOINCREMENT,
   rule_id      INTEGER NOT NULL REFERENCES alert_rules(id),
   ticker       TEXT NOT NULL,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS alert_events (
 );
 
 -- Quote history
-CREATE TABLE IF NOT EXISTS quote_history (
+CREATE TABLE quote_history (
   id         INTEGER PRIMARY KEY AUTOINCREMENT,
   ticker     TEXT NOT NULL,
   price      REAL NOT NULL,
@@ -47,6 +47,6 @@ CREATE TABLE IF NOT EXISTS quote_history (
   recorded_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE INDEX IF NOT EXISTS idx_qh_ticker_time ON quote_history(ticker, recorded_at DESC);
+CREATE INDEX idx_qh_ticker_time ON quote_history(ticker, recorded_at DESC);
 
 COMMIT;

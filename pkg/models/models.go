@@ -50,17 +50,17 @@ type Stock struct {
 }
 
 type Quote struct {
-	Ticker    string    `db:"ticker" json:"ticker"`
-	Price     float64   `db:"price" json:"price"`
-	Open      float64   `db:"open" json:"open"`
-	High      float64   `db:"high" json:"high"`
-	Low       float64   `db:"low" json:"low"`
-	Close     float64   `db:"close" json:"close"`
-	Volume    int64     `db:"volume" json:"volume"`
-	Change    float64   `db:"change" json:"change"`
-	ChangePct float64   `db:"change_pct" json:"change_pct"`
-	Timestamp time.Time `db:"timestamp" json:"timestamp"`
-	Source    string    `db:"source" json:"source"`
+	Ticker    string     `db:"ticker" json:"ticker"`
+	Price     float64    `db:"price" json:"price"`
+	Open      float64    `db:"open" json:"open"`
+	High      float64    `db:"high" json:"high"`
+	Low       float64    `db:"low" json:"low"`
+	Close     float64    `db:"close" json:"close"`
+	Volume    int64      `db:"volume" json:"volume"`
+	Change    float64    `db:"change" json:"change"`
+	ChangePct float64    `db:"change_pct" json:"change_pct"`
+	Timestamp time.Time  `db:"timestamp" json:"timestamp"`
+	Source    ProviderID `db:"source" json:"source"`
 }
 
 type OHLCV struct {

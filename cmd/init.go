@@ -60,11 +60,9 @@ var initCmd = &cobra.Command{
 			return fmt.Errorf("initialise database: %w", errors.Join(apperrors.ErrDB, err))
 		}
 
-		if closer, ok := repo.(interface{ Close() error }); ok {
-			defer func() {
-				_ = closer.Close()
-			}()
-		}
+		defer func() {
+			_ = repo.Close()
+		}()
 
 		cmd.Println("tkr initialization complete.")
 		if createdConfig {

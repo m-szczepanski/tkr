@@ -60,25 +60,25 @@ The skills reference these documents frequently:
 | Document | What it contains |
 |---|---|
 | `README.md` | Public overview, quick start, project structure |
-| `FUNCTIONAL_SPEC.md` | Authoritative behaviour spec — commands, data models, flows |
-| `API_PROVIDERS.md` | API endpoints, response shapes, rate limits for each provider |
-| `AI_AGENT_GUIDE.md` | Detailed rules for agents (package layout, interfaces, pitfalls) |
-| `TASKS.md` | All deliverable tasks with effort estimates and milestone grouping |
+| `.agent/FUNCTIONAL_SPEC.md` | Authoritative behaviour spec — commands, data models, flows |
+| `.agent/API_PROVIDERS.md` | API endpoints, response shapes, rate limits for each provider |
+| `.agent/AI_AGENT_GUIDE.md` | Detailed rules for agents (package layout, interfaces, pitfalls) |
+| `.agent/TASKS.md` | All deliverable tasks with effort estimates and milestone grouping |
 
-When a skill says "see `FUNCTIONAL_SPEC.md` §3.3" — open that file and read that section.
+When a skill says "see `.agent/FUNCTIONAL_SPEC.md` §3.3" — open that file and read that section.
 The spec always wins over the skill if there is a conflict.
 
 ---
 
 ## How to Work a Task from TASKS.md
 
-1. Find the task in `TASKS.md`. Read the task ID, description, and which milestone it belongs to.
-2. Read `go-conventions/SKILL.md`.
+1. Find the task in `.agent/TASKS.md`. Read the task ID, description, and which milestone it belongs to.
+2. Read `.agent/skills/go-conventions/SKILL.md`.
 3. Look up the task in the table above and read the additional skill(s).
 4. Check the **Definition of Done** checklist at the bottom of each relevant skill.
 5. Implement.
 6. Run `make lint test build` — all must pass clean.
-7. Mark the task `[x]` in `TASKS.md`.
+7. Mark the task `[x]` in `.agent/TASKS.md`.
 
 ---
 

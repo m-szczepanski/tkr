@@ -30,4 +30,7 @@ type Repository interface {
 	SaveQuote(ctx context.Context, q models.Quote) error
 	GetRecentQuotes(ctx context.Context, ticker string, limit int) ([]models.Quote, error)
 	PruneHistory(ctx context.Context, olderThan time.Duration) error
+
+	// Lifecycle
+	Close() error
 }
