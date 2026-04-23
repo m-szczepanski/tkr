@@ -35,15 +35,15 @@
 
 > Goal: `tkr init` works. Config and DB are created on disk.
 
-- [ ] 🟡 **M1-1** Implement `internal/config/config.go`: Viper-based loader, maps to a `Config` struct covering all keys in spec §6, handles `~` expansion in paths
-- [ ] 🟢 **M1-2** Create `config.example.yaml` with all keys documented inline
-- [ ] 🟢 **M1-3** Create `data/market_hours.yaml` with open/close UTC times for all 5 exchanges (spec §3.2)
-- [ ] 🟡 **M1-4** Implement `internal/db/migrate.go`: reads `*.sql` files from `migrations/`, tracks applied migrations in `schema_migrations` table, idempotent
-- [ ] 🟡 **M1-5** Write `migrations/001_initial_schema.sql` with all tables from spec §4
-- [ ] 🟡 **M1-6** Implement `internal/db/sqlite.go`: SQLite connection, implements `Repository` interface (all methods — can return `ErrNotImplemented` stubs initially)
-- [ ] 🟡 **M1-7** Implement `cmd/init.go`: creates config file from example template, creates DB directory, runs migrations, prints next-step hints (spec §2.1)
-- [ ] 🟢 **M1-8** Write unit tests for `internal/config/` (load from file, env override, path expansion)
-- [ ] 🟢 **M1-9** Write unit tests for `internal/db/` using `:memory:` SQLite (insert + query for each table)
+- [x] 🟡 **M1-1** Implement `internal/config/config.go`: Viper-based loader, maps to a `Config` struct covering all keys in spec §6, handles `~` expansion in paths
+- [x] 🟢 **M1-2** Create `config.example.yaml` with all keys documented inline
+- [x] 🟢 **M1-3** Create `data/market_hours.yaml` with open/close UTC times for all 5 exchanges (spec §3.2)
+- [x] 🟡 **M1-4** Implement `internal/db/migrate.go`: reads `*.sql` files from `migrations/`, tracks applied migrations in `schema_migrations` table, idempotent
+- [x] 🟡 **M1-5** Write `migrations/001_initial_schema.sql` with all tables from spec §4
+- [x] 🟡 **M1-6** Implement `internal/db/sqlite.go`: SQLite connection, implements `Repository` interface (all methods — can return `ErrNotImplemented` stubs initially)
+- [x] 🟡 **M1-7** Implement `cmd/init.go`: creates config file from example template, creates DB directory, runs migrations, prints next-step hints (spec §2.1)
+- [x] 🟢 **M1-8** Write unit tests for `internal/config/` (load from file, env override, path expansion)
+- [x] 🟢 **M1-9** Write unit tests for `internal/db/` using `:memory:` SQLite (insert + query for each table)
 
 ---
 
