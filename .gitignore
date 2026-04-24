@@ -31,3 +31,5 @@ go.work.sum
 .idea/
 .vscode/
 .copilot/
+.agent/skills/tkr-index/SKILL.md
+.agent/SKILL.md
