@@ -22,7 +22,7 @@ If a requirement in this guide conflicts with `FUNCTIONAL_SPEC.md`, **the spec w
 
 ### 1.1 Language & Version
 
-- Go **1.22+**
+- Go **1.25+**
 - Use the standard library wherever possible. Only add a dependency if it provides significant value (see §1.4 for the approved dependency list).
 - All code must pass `go vet ./...` and `golangci-lint run` with the project's `.golangci.yml` config.
 

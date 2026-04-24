@@ -18,7 +18,7 @@
 
 > Goal: `go build ./...` succeeds. All packages exist. No logic yet.
 
-- [x] 🟢 **M0-1** Initialise `go.mod` with module path `github.com/yourname/tkr`, Go 1.22
+- [x] 🟢 **M0-1** Initialise `go.mod` with module path `github.com/yourname/tkr`, Go 1.25+
 - [x] 🟢 **M0-2** Add all approved dependencies to `go.mod` and `go.sum` (`cobra`, `viper`, `resty`, `cron`, `zerolog`, `testify`, `sqlx`, `sqlite`, `beeep`)
 - [x] 🟢 **M0-3** Create directory tree: `cmd/`, `internal/config`, `internal/db`, `internal/provider`, `internal/alert`, `internal/notifier`, `internal/scheduler`, `internal/display`, `internal/apperrors`, `pkg/models`, `migrations/`, `data/`
 - [x] 🟢 **M0-4** Create `main.go` that calls `cmd.Execute()`

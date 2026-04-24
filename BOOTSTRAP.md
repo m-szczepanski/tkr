@@ -125,14 +125,14 @@ func main() {
 
 ### `go.mod`
 
-Use Go 1.22. Module path: `github.com/yourname/tkr`.
+Use Go 1.25+. Module path: `github.com/yourname/tkr`.
 
 Declare every approved dependency from `.agent/AI_AGENT_GUIDE.md §1.4` in the `require` block. Run `go mod tidy` after creating the file to populate `go.sum`.
 
 ```
 module github.com/yourname/tkr
 
-go 1.22
+go 1.25
 
 require (
     github.com/gen2brain/beeep v0.0.0-20240516210008-9c006672e7f4
@@ -597,7 +597,7 @@ Mark each item only when it is genuinely true — do not mark speculatively.
 
 ### Root files
 - [ ] `main.go` calls `cmd.Execute()`
-- [ ] `go.mod` declares Go 1.22 and all approved deps
+- [ ] `go.mod` declares Go 1.25 and all approved deps
 - [ ] `go.sum` exists and is populated (`go mod tidy` was run)
 - [ ] `Makefile` has `build`, `test`, `lint`, `install`, `clean`, `run` targets
 - [ ] `.gitignore` excludes binaries, `*.db*`, logs, real `config.yaml`
