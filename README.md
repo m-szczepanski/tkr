@@ -4,6 +4,14 @@
 
 tkr lets you track stocks from multiple global exchanges — including the US markets, Polish GPW/WIG, and major international indices — right from your command line. Configure price thresholds, percentage change alerts, and volume spikes, then let the daemon watch the markets for you and fire off notifications when your conditions are met.
 
+## Development Approach
+This project was developed using **Agentic AI workflows** to accelerate the development cycle and explore modern AI implementation patterns. 
+
+Key focus areas included:
+* **Agentic Frameworks:** Utilizing tools like `Roo Code` for autonomous task execution.
+* **Architecture:** Implementing sub-agents and specialized "Skills" to handle complex logic.
+* **Learning Objective:** Practical hands-on experience with multi-agent orchestration and prompt engineering in a production-like environment.
+
 ## Features
 
 - **Multi-exchange support** — US (NYSE, NASDAQ), Polish GPW/WIG, Frankfurt, London, and more
